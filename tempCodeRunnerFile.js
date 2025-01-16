@@ -1,10 +1,11 @@
-function Person(name){
-    this.name = name ; 
-    this.greet = function() {
-        console.log(`Hello ${this.name}`);
+const player = {
+    name : "Virat Kohli",
+    age : 36 , 
+    skill : "Batter" ,
+    greet : function(){
+        console.log(this);
+        console.log(`${this.name} is the greatest of all time.......`);
     }
 }
-let p1 = new Person("Virat Kohli") ;
-let p2 = new Person("Rohit Sharma");
-p1.greet();
-p2.greet();
+player.name = "Rohit Sharma" ;
+player.greet();

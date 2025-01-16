@@ -5,6 +5,18 @@ function addition(a,b){
     console.log(`Addition of ${a} and ${b} is ${a+b}.`)
 }
 
+function subtraction(a,b){
+    console.log(`subtraction of ${a} and ${b} is ${a-b}.`)
+}
+
+function multiplication(a,b){
+    console.log(`multiplication of ${a} and ${b} is ${a*b}.`)
+}
+
+function division(a,b){
+    console.log(`division of ${a} and ${b} is ${a/b}.`)
+}
+
 addition(20,30) ;
 
 function Person(name){
@@ -25,3 +37,16 @@ p2.greet();
 // Reassignment	         Allowed	                                Allowed	                Not allowed
 // Redeclaration	    Allowed	                           Not allowed	                    Not allowed
 // Mutability	       Fully mutable	               Fully mutable	   Immutable binding, mutable content for objects
+
+
+const player = {
+    name : "Virat Kohli",
+    age : 36 , 
+    skill : "Batter" ,
+    greet : function(){
+        console.log(this);
+        console.log(`${this.name} is the greatest of all time.......`);
+    }
+}
+player.name = "Rohit Sharma" ;
+player.greet();
