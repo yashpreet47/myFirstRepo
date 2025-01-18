@@ -1,11 +1,16 @@
-const player = {
-    name : "Virat Kohli",
-    age : 36 , 
-    skill : "Batter" ,
-    greet : function(){
-        console.log(this);
-        console.log(`${this.name} is the greatest of all time.......`);
+    function getweatherData(city,temp){
+        return new Promise((resolve,reject)=>{
+            setTimeout(() => {
+                console.log("City:",city,"Temperature:",temp);
+                resolve("Data Received!");
+            }, 2000);
+        });
     }
-}
-player.name = "Rohit Sharma" ;
-player.greet();
+
+    async function getweather(){
+        await getweatherData("Nagpur",15);
+        await getweatherData("Raipur",20);
+        await getweatherData("Chandrapur",25);
+        await getweatherData("Dhamtari",16);
+    }
+    getweather();

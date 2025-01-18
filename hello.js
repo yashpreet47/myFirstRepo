@@ -50,3 +50,17 @@ const player = {
 }
 player.name = "Rohit Sharma" ;
 player.greet();
+
+
+
+function hello(){
+    console.log("Hello World ! ");
+}
+console.log("One");
+console.log("Two");
+setTimeout(()=>{
+    console.log("Executed after 2 seconds..");
+    hello();
+}, 2000);
+console.log("Three");
+console.log("Four");
